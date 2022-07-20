@@ -1,24 +1,15 @@
-<form [formGroup]="formGroup"
-      (input)="onFormChange()"
-      (ngSubmit)="onSubmit()">
-  <h2>Авторизация на сайте</h2>
-  <mat-form-field>
-    <mat-label>Login</mat-label>
-    <input matInput formControlName="login">
-    <mat-error *ngIf="formGroup.hasError('required', 'login')">Это поле обязательно</mat-error>
-  </mat-form-field>
-
-  <mat-form-field>
-    <mat-label>Password</mat-label>
-    <input matInput formControlName="password">
-    <mat-error *ngIf="formGroup.hasError('required', 'password')">Это поле обязательно</mat-error>
-  </mat-form-field>
-
-  <button mat-raised-button color="primary"
-          [disabled]="formGroup.invalid || !!formError">Войти</button>
-  <mat-error *ngIf="formError">{{formError}}</mat-error>
-
-<!--  {{formGroup.get('login').errors | json}}
-  {{formGroup.getError('required','login')}}
-  {{formGroup.getError('required','password')}}-->
-</form>
+<mat-card>
+  <form [formGroup]="formGroup" (input)="onFormChange()" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input matInput type="text" placeholder="Login" formControlName="login">
+      <mat-error *ngIf="formGroup.hasError('required', 'login')">Это поле обязательно</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput type="password" formControlName="password">
+      <mat-error *ngIf="formGroup.hasError('required', 'password')">Это поле обязательно</mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary"
+            [disabled]="disabled || formGroup.invalid || !!formError">Войти</button>
+  </form>
+</mat-card>
