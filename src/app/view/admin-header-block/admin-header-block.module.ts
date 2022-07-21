@@ -4,7 +4,7 @@ import { AdminHeaderBlockComponent } from './admin-header-block/admin-header-blo
 import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatButtonModule} from "@angular/material/button";
-import {AdminAuthStoreModule} from "../../store/admin-auth-store/admin-auth-store.module";
+import {RouterModule} from "@angular/router";
 
 
 
@@ -19,7 +19,8 @@ import {AdminAuthStoreModule} from "../../store/admin-auth-store/admin-auth-stor
     CommonModule,
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule
   ]
 })
 export class AdminHeaderBlockModule { }
