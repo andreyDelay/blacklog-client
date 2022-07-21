@@ -4,8 +4,6 @@ import {RouterModule} from "@angular/router";
 import { LoginPageComponent } from './pages/login-page/login-page.component';
 import {AdminLoginBlockModule} from "../../../../view/admin-login-block/admin-login-block.module";
 
-
-
 @NgModule({
   declarations: [
     LoginPageComponent

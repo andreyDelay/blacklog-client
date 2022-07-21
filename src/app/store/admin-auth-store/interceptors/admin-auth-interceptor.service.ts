@@ -28,7 +28,7 @@ export class AdminAuthInterceptor implements HttpInterceptor {
       flatMap(token => {
         const authRequest = token ? request.clone({
           setHeaders: {
-            Authorization: `Bearer ${token}`
+            Authorization: `Bearer_${token}`
           }
         }) : request;
         return next.handle(authRequest).pipe(

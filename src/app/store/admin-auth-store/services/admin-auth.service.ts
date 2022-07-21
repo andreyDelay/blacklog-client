@@ -6,6 +6,7 @@ import {Observable} from "rxjs";
 import {AuthData} from "../store/admin-auth.reducer";
 import {select, Store} from "@ngrx/store";
 import {getAuthData} from "../store/admin-auth.selectors";
+import {environment} from "../../../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -30,7 +31,7 @@ export class AdminAuthService {
 
   login(body: {login:string, password: string}): Observable<AuthData> {
     return this.httpClient.post<{accessToken: string}>(
-      'http://127.0.0.1:8080/api/v1/auth/login',
+      environment.apiUrl + 'auth/login',
       body
     ).pipe(
       map(res => ({
@@ -42,7 +43,7 @@ export class AdminAuthService {
 
   refresh(): Observable<AuthData> {
     return this.httpClient.post<{accessToken: string}>(
-      'http://127.0.0.1:8080/api/v1/auth/refresh',
+      environment.apiUrl + 'auth/refresh',
       {}
     ).pipe(
       map(res => ({
