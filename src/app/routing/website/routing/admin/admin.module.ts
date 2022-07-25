@@ -6,7 +6,6 @@ import {AdminFooterBlockModule} from "../../../../view/admin-footer-block/admin-
 import {AdminHeaderBlockModule} from "../../../../view/admin-header-block/admin-header-block.module";
 import {AdminNavBlockModule} from "../../../../view/admin-nav-block/admin-nav-block.module";
 
-
 @NgModule({
   declarations: [
     AdminPageComponent
@@ -29,9 +28,19 @@ import {AdminNavBlockModule} from "../../../../view/admin-nav-block/admin-nav-bl
               .then(module => module.DashboardModule)
           },
           {
-            path: 'grid/:namespace/:entity',
-            loadChildren: () => import('./routing/grid/grid.module')
-              .then(module => module.GridModule)
+            path: 'test-packs',
+            loadChildren: () => import('./routing/test-pack/test-pack.module')
+              .then(module => module.TestPackModule)
+          },
+          {
+            path: 'lines',
+            loadChildren: () => import('./routing/line/line.module')
+              .then(module => module.LineModule)
+          },
+          {
+            path: 'joints',
+            loadChildren: () => import('./routing/joint/joint.module')
+              .then(module => module.JointModule)
           },
           {
             path: 'form/:namespace/:entity',

@@ -1,7 +1,17 @@
-<ul>
-  <li><a routerLink="">Home Page</a></li>
-  <li><a routerLink="admin/auth/login">Admin Login Page</a></li>
-  <li><a routerLink="admin/dashboard">Admin Dashboard Page</a></li>
-  <li><a routerLink="546546f1sdfsd">Not Found Page</a></li>
-</ul>
-<p>home-page works!</p>
+<div class="grid-container">
+  <mat-toolbar color="primary" class="header">
+    <button mat-icon-button class="icon" [routerLink]="''">
+      <mat-icon>home</mat-icon>
+    </button>
+    <button mat-icon-button class="icon" [routerLink]="'admin'">
+      <mat-icon>dashboard</mat-icon>
+    </button>
+    <span class="spacer"></span>
+    <span>BlackLog</span>
+    <span class="spacer"></span>
+    <button mat-icon-button class="icon" [routerLink]="'admin/auth'">
+      <mat-icon>login</mat-icon>
+    </button>
+  </mat-toolbar>
+  <app-admin-footer-block class="footer"></app-admin-footer-block>
+</div>

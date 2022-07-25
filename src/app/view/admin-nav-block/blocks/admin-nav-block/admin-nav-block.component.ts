@@ -9,27 +9,27 @@ const TREE_DATA: NestedTreeNode[] = [
     children: [
       {
         name: 'Test Packs',
-        href: '/admin/grid/content/pages'
+        href: '/admin/test-packs'
       },
       {
         name: 'Lines',
-        href: '/admin/grid/content/posts'
+        href: '/admin/lines'
       },
       {
         name: 'Joints',
-        href: '/admin/grid/content/comments'
+        href: '/admin/joints'
       },
     ]
   }, {
-    name: 'Accounts',
+    name: 'Welders',
     icon: 'perm_identity',
     children: [
       {
-        name: 'Admins',
+        name: 'Admissions',
         icon: 'manage_accounts',
         href: '/admin/grid/account/admins'
       }, {
-        name: 'Users',
+        name: 'Welders',
         icon: 'face',
         href: '/admin/grid/account/users'
       },
